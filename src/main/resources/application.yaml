@@ -4,11 +4,11 @@ spring:
 
   cloud:
     function:
-      definition: pessoaConsumer
+      definition: pessoaConsumidor
 
     stream:
       bindings:
-        pessoaConsumer-in-0:
+        pessoaConsumidor-in-0:
           destination: pessoa.atualizada
           group: pessoa-group1
           content-type: application/json
@@ -19,7 +19,7 @@ spring:
           auto-create-topics: true
 
         bindings:
-          pessoaConsumer-in-0:
+          pessoaConsumidor-in-0:
             consumer:
               auto-offset-reset: earliest
               enableDlq: true
